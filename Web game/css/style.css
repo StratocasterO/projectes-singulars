@@ -1,0 +1,575 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+.game-screen {
+  width: 980px;
+  height: 564px;
+  border: 10px solid brown;
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+.game-screen .commands {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.game-screen .commands #menu {
+  left: 0;
+}
+
+.game-screen .commands #pause {
+  right: 0;
+}
+
+.game-screen .commands button {
+  position: absolute;
+  top: 0;
+  width: 75px;
+  height: 30px;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  background-color: #007575;
+  border: 3px solid brown;
+  border-radius: 10px;
+}
+
+.game-screen .game {
+  width: 2880px;
+  height: 544px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.game-screen .game .landscape {
+  width: 2880px;
+  height: 544px;
+  background-size: cover;
+  position: relative;
+  background-image: url("../img/landscape/landscape1_landscape1.png");
+  background-color: black;
+}
+
+.game-screen .game .car {
+  width: 250px;
+  height: 100px;
+  position: absolute;
+  left: 100px;
+  bottom: 20px;
+}
+
+.game-screen .game .car #car-body {
+  width: 250px;
+}
+
+.game-screen .game .car .car-wheels {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  bottom: 0;
+}
+
+.game-screen .game .car #car-wheel-front {
+  right: 27px;
+}
+
+.game-screen .game .car #car-wheel-back {
+  left: 15.5px;
+}
+
+.game-screen .game .events .event {
+  visibility: hidden;
+  width: 850px;
+  height: 470px;
+  position: absolute;
+  left: 55px;
+  top: 57px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: wheat;
+  border: 5px solid brown;
+  border-radius: 20px;
+}
+
+.game-screen .game .events .event button {
+  width: 110px;
+  height: 30px;
+  padding: 10px;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-self: center;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  background-color: #007575;
+  border: 3px solid brown;
+  border-radius: 10px;
+}
+
+.game-screen .game .events .event p {
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.game-screen .game .events .event h2 {
+  font-family: "Roboto", sans-serif;
+  margin: 20px;
+}
+
+.game-screen .game .events #intro {
+  visibility: visible;
+  padding: 0 60px;
+}
+
+.game-screen .game .events #intro h1 {
+  color: #007575;
+  font-family: "Roboto", sans-serif;
+  font-size: 2em;
+  margin: 10px;
+}
+
+.game-screen .game .events #intro p {
+  text-align: left;
+  font-family: "Roboto Mono", monospace;
+  margin: 10px;
+  padding: 0;
+}
+
+.game-screen .game .events #event1 #event1-reset, .game-screen .game .events #event1 #event1-advance {
+  display: none;
+}
+
+.game-screen .game .events #event1 #event1-message {
+  display: none;
+  position: absolute;
+  top: 70px;
+}
+
+.game-screen .game .events #event1 .dropabble {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 800px;
+  margin: auto;
+}
+
+.game-screen .game .events #event1 .dropabble img {
+  width: 100%;
+  height: 100%;
+}
+
+.game-screen .game .events #event1 .dropabble .initial-position {
+  margin: 5px;
+  width: 130px;
+  height: 100px;
+  padding: 10px 0;
+}
+
+.game-screen .game .events #event1 .dropabble .end-position {
+  margin: 5px;
+  width: 130px;
+  height: 100px;
+  border: 2px solid brown;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.game-screen .game .events #event3 {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-image: url("../img/eventThree/cliff.svg");
+  overflow: hidden;
+}
+
+.game-screen .game .events #event3 #event3-reset, .game-screen .game .events #event3 #event3-advance, .game-screen .game .events #event3 #event3-message {
+  display: none;
+}
+
+.game-screen .game .events #event3 #event3-message {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game-screen .game .events #event3 #progress-bar {
+  margin-top: 5px;
+  width: 80%;
+  height: 30px;
+  background-color: grey;
+}
+
+.game-screen .game .events #event3 #bar {
+  width: 0%;
+  height: 30px;
+  background-color: red;
+}
+
+.game-screen .game .events #event3 .car {
+  left: 20px;
+  bottom: 160px;
+}
+
+.game-screen .game .events #event3 #event3-car-wheel-front {
+  right: 27px;
+}
+
+.game-screen .game .events #event3 #event3-car-wheel-back {
+  left: 15.5px;
+}
+
+.game-screen .game .events #event4 {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  overflow: hidden;
+}
+
+.game-screen .game .events #event4 .h2 {
+  margin: 0px;
+}
+
+.game-screen .game .events #event4 .car {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 15px;
+  z-index: 5;
+  -webkit-transition: 2s linear;
+  transition: 2s linear;
+}
+
+.game-screen .game .events #event4 #event4-car-wheel-front {
+  right: 27px;
+  -webkit-transition: 2s linear;
+  transition: 2s linear;
+}
+
+.game-screen .game .events #event4 #event4-car-wheel-back {
+  left: 15.5px;
+  -webkit-transition: 2s linear;
+  transition: 2s linear;
+}
+
+.game-screen .game .events #event4 .energy-change {
+  height: 250px;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.game-screen .game .events #event4 .energy-change .button-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  left: 25px;
+}
+
+.game-screen .game .events #event4 .energy-change .button-check img {
+  visibility: hidden;
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.game-screen .game .events #event4 .energy-change .image-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.game-screen .game .events #event4 .energy-change h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 0;
+  font-family: "Roboto Mono", monospace;
+}
+
+.game-screen .game .events #event4 .energy-change img {
+  width: 100%;
+  height: 100%;
+  background-color: wheat;
+}
+
+.game-screen .game .events #event4 .energy-change .current-energy {
+  position: relative;
+  padding: 5px 0;
+  height: 75px;
+  width: 20%;
+  border: 2px solid brown;
+  border-radius: 10px;
+}
+
+.game-screen .game .events #event4 .energy-change .energy-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 75px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.game-screen .game .events #event4 .energy-change .energy-options .energy-option {
+  position: relative;
+  padding: 5px 0;
+  height: 75px;
+  width: 20%;
+  border: 2px solid brown;
+  border-radius: 10px;
+}
+
+.game-screen .game .events #event4 .energy-change .energy-options .energy-option #h3-diesel {
+  color: #d4aa00ff;
+}
+
+.game-screen .game .events #event4 .energy-change .energy-options .energy-option #h3-gasoline {
+  color: #0000ffff;
+}
+
+.game-screen .game .events #event4 .energy-change .energy-options .energy-option #h3-gas {
+  color: #c83737ff;
+}
+
+.game-screen .game .events #event4 .energy-change .energy-options .energy-option #h3-electric {
+  color: #008000ff;
+}
+
+.game-screen .game .events #event4 #event4-finish {
+  position: relative;
+  top: 5px;
+  z-index: 1;
+  width: 230px;
+  height: 30px;
+  padding: 10px;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-self: center;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  background-color: #007575;
+  border: 3px solid brown;
+  border-radius: 5px;
+}
+
+.game-screen .game .events #feedback {
+  overflow: auto;
+  font-family: "Roboto", sans-serif;
+}
+
+.game-screen .game .events #feedback #form {
+  margin: 0 20px;
+}
+
+.game-screen .game .events #feedback #form h3 {
+  margin: 5px;
+}
+
+.game-screen .game .events #feedback #form .options {
+  margin: 5px;
+}
+
+.game-screen .game .events #feedback #form textarea {
+  width: 500px;
+  height: 30px;
+  margin: 0;
+}
+
+.game-screen .game .events #feedback #feedback-send {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game-screen .game .events #feedback #feedback-send #error {
+  visibility: hidden;
+  color: white;
+  background-color: red;
+}
+
+.game-screen .game .events #results {
+  display: block;
+}
+
+.game-screen .game .events #results p {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  width: 1024px;
+  background-image: url("../img/background/background.svg");
+  background-size: cover;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 960px;
+  height: 120px;
+}
+
+.content header #logo {
+  width: 300px;
+  margin: 10px;
+}
+
+.content main.game-screen {
+  margin: 0 20px 40px 20px;
+}
+/*# sourceMappingURL=style.css.map */
